@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("./fonts/montserrat-regular.otf") format("opentype"),
+    url("./fonts/montserrat-regular.svg") format("svg"),
+    url("./fonts/montserrat-regular.ttf") format("truetype"),
+    url("./fonts/montserrat-regular.woff") format("woff"),
+    url("./fonts/montserrat-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("./fonts/montserrat-medium.otf") format("opentype"),
+    url("./fonts/montserrat-medium.svg") format("svg"),
+    url("./fonts/montserrat-medium.ttf") format("truetype"),
+    url("./fonts/montserrat-medium.woff") format("woff"),
+    url("./fonts/montserrat-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url("./fonts/montserrat-semibold.otf") format("opentype"),
+    url("./fonts/montserrat-semibold.svg") format("svg"),
+    url("./fonts/montserrat-semibold.ttf") format("truetype"),
+    url("./fonts/montserrat-semibold.woff") format("woff"),
+    url("./fonts/montserrat-semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  width: 1216px;
+  display: flex;
+  margin: auto;
+}
+.header {
+  padding: 60px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .header__logo {
+    width: 200px;
+    height: 64px;
+  }
+  .header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-family: "Montserrat Medium";
+    font-size: 23px;
+    color: #333333;
+  }
+  .header__nav a {
+    text-decoration: none;
+  }
+  .header__nav a:visited,
+  .header__nav a:active {
+    color: #333333;
+  }
+  .header__social {
+    display: flex;
+    gap: 28px;
+  }
+}
+.page__slider {
+  display: flex;
+  justify-self: center;
+  height: 932px;
+  background-color: #394573;
+  width: 100%;
+  clip-path: ellipse(80% 65% at 50% 35%);
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .slider-content__controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .slider-content__controls__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      background-image: url(./img/control-left.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .slider-content__controls__icon.active {
+      background-image: url(./img/control-right.svg);
+    }
+  }
+  .slider-content__title {
+    font-family: "Montserrat SemiBold";
+    font-size: 50px;
+    line-height: 61px;
+    color: #bee7e8;
+    width: 500px;
+  }
+}
